@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'maven'
+
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = 1.7
+version = '0.1'
+group = 'net.ofd'
+mainClassName = group + '.ofchat.client.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "junit:junit:+"
+    compile 'com.google.code.gson:gson:2.3.1'
+}
+
+jar {
+    manifest {
+        attributes('Main-Class': mainClassName,
+                'Class-Path': ""
+        )
+    }
+    baseName = name
+    version = '0.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
