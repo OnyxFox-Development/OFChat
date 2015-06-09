@@ -3,6 +3,6 @@ deploy:
   provider: releases
   api_key:
     secure: hm8SxWmMP9msXAhFweirlPwiZN/u98sw/aYjZ09Oop3Pg98QT2Qr0/QcEzPX/6jAUM4xsIIljOVXiKdGvKbwiKjttqOx92/Op1PvCdE6iyCymJU1GHU9uajM8wVtioWpE/A5Egto930oXJQML6BcKyBoiAvG4x4vvfeBpo9d1yG7gQQb9F2VPya4SRUbpcnLaSeRtLa9gzTx8478VbeZlxMm+R9MRvhsoNWIwVVi7KP1JpfbTJS4nTxeI/oBdaSOBRrSU8S+qRSBDTaI/pO1uEKLtj5pCmigg9sfDJGHjKnlEpO9scGYSq3r9mT2RbdpvnFYJ+rxVO2Vg6n3gGpjPYY/4kzQFpcdHfC34PDYuWeqEEvhVTV9v/XtcagDswiI7VRSiapvxxvCAd3xHlfgmUrB+9M4m3EM+ctlZIttstmEc9KWxzHGB+n4XImDC9cHl6kIfsc+39qggtaxhLYABTrKRcqKBmETPG6Rtcxs+9Ok07R04HoSHtmBYVkMlz9hseCJT2xDmJ87wWq/bVei2bWdmSgPyZrcYjVC9cMYA/mkDTDPx9ADkurSERTHewHZ3utgTJ+wgDOKxQdAYRDouA/4laOLF/7r+etnTJTGI26+4UQ3qTuRZACiip2xIh5D471WDanjfEGEh8TPIZe0uGHNGBOjJo6NKFd7aZKY/VE=
-  file: client/build/distributions/client.zip
+  file: client/build/distributions/client-0.1.zip
   on:
     repo: OnyxFox-Development/OFChat
