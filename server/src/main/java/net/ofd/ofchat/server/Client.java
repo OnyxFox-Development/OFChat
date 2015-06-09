@@ -1,7 +1,7 @@
-package net.ofd.chattest.server;
+package net.ofd.ofchat.server;
 
 import com.google.gson.Gson;
-import net.ofd.chattest.common.packet.*;
+import net.ofd.ofchat.common.packet.*;
 
 import java.io.PrintWriter;
 import java.net.Socket;

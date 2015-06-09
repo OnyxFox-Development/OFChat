@@ -1,4 +1,4 @@
-package net.ofd.chattest.server;
+package net.ofd.ofchat.server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;

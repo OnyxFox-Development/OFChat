@@ -1,0 +1,2 @@
+archivesBaseName = "OFChat-server"
+mainClassName = group + '.ofchat.server.Main'

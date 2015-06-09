@@ -1,4 +1,4 @@
-package net.ofd.chattest.common.packet;
+package net.ofd.ofchat.common.packet;
 
 public enum Packets
 {
