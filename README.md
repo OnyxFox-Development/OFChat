@@ -1,2 +1,2 @@
-# OFChat [![Build Status](https://travis-ci.org/OnyxFox-Development/OFChat.svg?branch=master)](https://travis-ci.org/OnyxFox-Development/OFChat)
+# OFChat [![Build Status](http://walterbarnes.net:8080/buildStatus/icon?job=OFChat)](http://walterbarnes.net:8080/job/OFChat/)
 A simple server-client based chat program written in Java
