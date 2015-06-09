@@ -1,2 +1,1 @@
 archivesBaseName = "OFChat-client"
-mainClassName = group + '.ofchat.client.Main'

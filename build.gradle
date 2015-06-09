@@ -15,9 +15,16 @@ subprojects {
 }
 
 configure(subprojects.findAll {it.name != 'core'}) {
-	apply plugin: 'application'
+    apply plugin: 'application'
+    mainClassName = group + '.' + rootProject.name.toLowerCase() + '.' + project.name + '.Main'
 
 	dependencies {
 		compile project(':core')
 	}
+
+    distributions {
+        main {
+            baseName = rootProject.name + "-" + project.name
+        }
+    }
 }
