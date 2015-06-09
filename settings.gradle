@@ -1,1 +1,2 @@
+rootProject.name = 'OFChat'
 include  'core','client','server'
