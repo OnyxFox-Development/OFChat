@@ -1,30 +1,55 @@
 apply plugin: 'base'
 
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
 allprojects {
-	version = '0.1'
 	group = 'net.ofd'
 }
 
 subprojects {
 	apply plugin: 'java'
-	
+    version = "${config.app_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
+    archivesBaseName = rootProject.name + "-" + project.name
+
 	repositories {
 		mavenCentral()
-		mavenLocal()
 	}
 }
 
 configure(subprojects.findAll {it.name != 'core'}) {
     apply plugin: 'application'
+
     mainClassName = group + '.' + rootProject.name.toLowerCase() + '.' + project.name + '.Main'
 
 	dependencies {
 		compile project(':core')
 	}
 
-    distributions {
-        main {
-            baseName = rootProject.name + "-" + project.name
+    jar {
+        manifest {
+            attributes('Main-Class': mainClassName,
+                    'Class-Path': ""
+            )
         }
+
+        from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
+//    def projects = rootProject.subprojects.findAll {it.name != project.name}.collect{ ":"+it.name }
+//    print(projects)
+//
+//    task oneJar( type: Jar , dependsOn: projects.collect{ it+":compileJava"}) {
+//        baseName = archivesBaseName
+//        //from files(projects.collect{ project(it).sourceSets.main.output })
+//        from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//    }
+//
+//    artifacts {
+//        archives oneJar
+//    }
 }

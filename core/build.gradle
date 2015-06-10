@@ -1,5 +1,4 @@
-archivesBaseName = "OFChat-core"
-
 dependencies {
 	compile 'com.google.code.gson:gson:2.3.1'
+	compile 'com.almworks.sqlite4java:sqlite4java:+'
 }
